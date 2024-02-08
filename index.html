@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Van</title>
+  <!-- icon-->
+  <link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+  <style>
+    .response-container {
+      border-radius: 8px;
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Tambahkan CSS untuk input sticky bottom */
+    #input-container {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #f0f0f0;
+      padding: 10px;
+    }
+
+    /* Ganti ukuran dan buat teks "Ini adalah hasil dari" menjadi tebal */
+    .result-heading {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-light fixed-top mb-5">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Chatvan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house"></i> Home</a>
+          <a class="nav-link" href="https://instagram.com/ivaannkan"><i class="fa-solid fa-phone"></i> Contact</a>
+         
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container mb-5 mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="response-container" id="response"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Input diletakkan di bawah layar dengan posisi sticky bottom -->
+  <div id="input-container">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" id="inputText" placeholder="Ketik sesuatu...">
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-primary" onclick="submitText()">Enter</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="chat_van.js"></script>
+
+</body>
+</html>
