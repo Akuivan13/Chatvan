@@ -1,19 +1,18 @@
 # Chatvan
 
-<p align="center"> AUTHOR: AKUIVAN13
 <p align="center">
   <img src="img/logo.png" alt="Chatvan Logo">
 </p>
 
 ## Selamat Datang di Chatvan!
 
-Chatvan adalah platform chat yang terinspirasi oleh Bot WhatsApp Dan Chatgpt, Memberikan Pengalaman Unik Dalam Berkomunikasi Secara Online
+Chatvan adalah platform chat yang terinspirasi oleh Bot WhatsApp dan ChatGPT, memberikan pengalaman unik dalam berkomunikasi secara online.
 
 ### Cara Penggunaan:
 
 1. **Ketik Kata Kunci:** Contohnya Kamu Ingin Mengetahui Apa Saja Kata Kunci Yang Tersedia Kamu Bisa Mengetik *Menu*.
 2. **Mulai Berbicara:** Nikmati pengalaman berkomunikasi yang unik dengan Chatvan.
-3. **Hapus Histori Komunikasi:** Bagaiamana Caranya? . Gampang Kamu Hanya Perlu Mengetik *Clear* Dan Otomatis Komunikasi Langsung Terhapus Semua
+3. **Hapus Histori Komunikasi:** Bagaimana Caranya? Gampang Kamu Hanya Perlu Mengetik *Clear* Dan Otomatis Komunikasi Langsung Terhapus Semua
 
 ## Bagaimana Cara Berkontribusi?
 
@@ -29,5 +28,6 @@ Jika Anda ingin berkontribusi pada pengembangan Chatvan, berikut langkah-langkah
 Terima kasih telah menggunakan Chatvan! Jangan ragu untuk mengirim masukan atau pertanyaan Anda kepada kami.
 
 ## Kontak Kreator
-Instagram @ivaannkan
-Wa 089505520763
+### AUTHOR: **AKUIVAN13**
+Instagram @ivaannkan 📸  
+WhatsApp 089505520763 📱  
