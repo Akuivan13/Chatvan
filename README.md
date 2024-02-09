@@ -28,6 +28,6 @@ Jika Anda ingin berkontribusi pada pengembangan Chatvan, berikut langkah-langkah
 Terima kasih telah menggunakan Chatvan! Jangan ragu untuk mengirim masukan atau pertanyaan Anda kepada kami.
 
 ## Kontak Kreator
-### AUTHOR: **AKUIVAN13**
+## AUTHOR: **AKUIVAN13**
 Instagram @ivaannkan 📸  
 WhatsApp 089505520763 📱  
