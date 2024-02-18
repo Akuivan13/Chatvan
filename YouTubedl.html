@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Player</title>
+</head>
+<body>
+    <input type="text" id="queryInput" placeholder="Masukkan query...">
+    <button id="searchButton">Cari</button>
+
+    <div id="searchResults"></div>
+
+    <audio id="audioPlayer" style="display: none;" controls></audio>
+    <video id="videoPlayer" style="display: none;" controls></video>
+
+    <script>
+        // Fungsi untuk mencari dan menampilkan hasil pencarian
+        async function searchMedia(query) {
+            try {
+                const response = await fetch(`https://api.lolhuman.xyz/api/ytplay2?apikey=GataDios&query=${query}`);
+                const data = await response.json();
+                if (data.status === 200) {
+                    const result = data.result;
+                    const title = result.title;
+                    const thumbnail = result.thumbnail;
+                    const audioUrl = result.audio;
+                    const videoUrl = result.video;
+                    
+                    const searchResultsDiv = document.getElementById("searchResults");
+                    searchResultsDiv.innerHTML = ""; // Kosongkan isi sebelumnya
+
+                    const resultDiv = document.createElement("div");
+                    resultDiv.innerHTML = `
+                        <img src="${thumbnail}" alt="${title}" style="width: 100px; height: auto;">
+                        <p>${title}</p>
+                        <button onclick="playMedia('${audioUrl}', '${videoUrl}')">Putar Audio</button>
+                        <button onclick="playMedia('${videoUrl}', '${audioUrl}')">Putar Video</button>
+                    `;
+                    searchResultsDiv.appendChild(resultDiv);
+                } else {
+                    console.error("Error fetching media:", data.message);
+                }
+            } catch (error) {
+                console.error("Error fetching media:", error);
+            }
+        }
+
+        // Fungsi untuk memainkan media yang dipilih
+        function playMedia(primaryUrl, fallbackUrl) {
+            try {
+                const audioPlayer = document.getElementById("audioPlayer");
+                const videoPlayer = document.getElementById("videoPlayer");
+
+                // Cek apakah browser mendukung pemutaran video
+                const canPlayVideo = videoPlayer.canPlayType && videoPlayer.canPlayType('video/mp4') !== '';
+                
+                if (canPlayVideo) {
+                    audioPlayer.style.display = "none";
+                    videoPlayer.style.display = "block";
+                    videoPlayer.src = primaryUrl;
+                    videoPlayer.play();
+                } else {
+                    videoPlayer.style.display = "none";
+                    audioPlayer.style.display = "block";
+                    audioPlayer.src = fallbackUrl;
+                    audioPlayer.play();
+                }
+            } catch (error) {
+                console.error("Error playing media:", error);
+            }
+        }
+
+        // Tambahkan event listener untuk tombol "Cari"
+        document.getElementById("searchButton").addEventListener("click", function() {
+            const query = document.getElementById("queryInput").value;
+            searchMedia(query);
+        });
+    </script>
+</body>
+</html>
