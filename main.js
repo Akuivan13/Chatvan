@@ -736,36 +736,6 @@ case 'kpop':
     break;
 
 
-case 'asupanrandom':
-    fetch('https://api.zenext.xyz/randomasupan/asupan?apikey=zenzkey_0f2e74746f')
-        .then(response => response.blob())
-        .then(blob => {
-            // Membuat objek URL untuk blob yang diperoleh dari respons
-            const videoUrl = URL.createObjectURL(blob);
-
-            // Membuat elemen video
-            const videoElement = document.createElement('video');
-            // Mengatur sumber video dengan URL asupan random
-            videoElement.src = videoUrl;
-            // Mengatur atribut lainnya
-            videoElement.controls = true;
-            videoElement.autoplay = true;
-
-            videoElement.style.width = '50%';
-videoElement.style.maxWidth = '100%';
-
-            // Menambahkan video asupan random ke dalam array responses
-            responses.push(`<p class="result-heading">Ini adalah video asupan random:</p>`);
-            responses.push(videoElement.outerHTML);
-            // Menampilkan semua respons
-            displayResponses();
-        })
-        .catch(error => {
-            console.error('Error fetching asupan random content:', error.message);
-            responses.push(`<p class="result-heading">Gagal mengambil konten asupan random: ${error.message}</p>`);
-            displayResponses();
-        });
-    break;
     
       // Menambahkan fitur darkjokes ke dalam switch case
 case 'darkjokes':
