@@ -278,7 +278,7 @@ async function handleVGPTCommand(query) {
 }
 function handlePlayCommand(title) {
     // Gunakan judul lagu yang diberikan oleh pengguna untuk membentuk URL API
-    const apiUrl = `https://api.miftahganzz.my.id/api/download/play-youtube-audio?title=${encodeURIComponent(title)}&apikey=zex`;
+    const apiUrl = `https://api.miftahganzz.my.id/api/download/play-youtube-audio?title=${encodeURIComponent(title)}&apikey=miftah`;
 
     try {
         // Lakukan fetch terhadap URL API yang dibentuk
@@ -319,7 +319,7 @@ function handlePlayCommand(title) {
 
 function handlePlayVideoCommand(title) {
     // Bentuk URL API dengan judul yang diberikan oleh pengguna
-    const apiUrl = `https://api.miftahganzz.my.id/api/download/play-youtube-video?title=${encodeURIComponent(title)}&apikey=global`;
+    const apiUrl = `https://api.miftahganzz.my.id/api/download/play-youtube-video?title=${encodeURIComponent(title)}&apikey=miftah`;
 
     try {
         // Lakukan fetch terhadap URL API yang dibentuk
